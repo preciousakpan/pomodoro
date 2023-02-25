@@ -5,3 +5,4 @@ flask-socketio
 flask_cors
 Werkzeug
 pymysql
+django
