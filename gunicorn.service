@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/home/ubuntu/pomodoro
+Environment="PATH=/home/ubuntu/pomodoro/venv/bin"
+ExecStart=/home/ubuntu/pomodoro/venv/bin/gunicorn --workers 2 --bind unix:gunicorn.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target
