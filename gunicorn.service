@@ -1,13 +1,11 @@
 [Unit]
-Description=Gunicorn
+Description=Gunicorn instance to serve Flask
 After=network.target
-
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/home/ubuntu/pomodoro
-Environment="PATH=/home/ubuntu/pomodoro/venv/bin"
-ExecStart=/home/ubuntu/pomodoro/venv/bin/gunicorn --workers 2 --bind unix:gunicorn.sock -m 007 wsgi:app
-
+WorkingDirectory=/home/ubuntu/calculator
+Environment="PATH=/home/ubuntu/calculator/ansible_env/bin"
+ExecStart=/home/ubuntu/calculator/ansible_env/bin/gunicorn --bind 0.0.0.0:8000 wsgi:app
 [Install]
 WantedBy=multi-user.target
