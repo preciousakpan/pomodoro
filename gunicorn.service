@@ -3,7 +3,7 @@ Description=Gunicorn
 After=network.target
 
 [Service]
-User=www-data
+User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/pomodoro
 Environment="PATH=/home/ubuntu/pomodoro/venv/bin"
