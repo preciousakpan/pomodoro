@@ -7,7 +7,7 @@ User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/pomodoro
 Environment="PATH=/home/ubuntu/pomodoro/venv/bin"
-ExecStart=/home/ubuntu/pomodoro/venv/bin/gunicorn --workers 2 --bind unix:gunicorn.sock -m 027 wsgi:app
+ExecStart=/home/ubuntu/pomodoro/venv/bin/gunicorn --workers 2 --bind unix:gunicorn.sock -m 007 wsgi:app
 
 [Install]
 WantedBy=multi-user.target
